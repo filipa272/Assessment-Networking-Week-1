@@ -4,34 +4,31 @@ rootdir: /home/runner/work/Assessment-Networking-Week-1/Assessment-Networking-We
 plugins: requests-mock-1.12.1
 collected 91 items
 
-test_postcode_cache.py FFFFFFFFFFFFF                                     [ 14%]
-test_postcode_cli.py ................................                    [ 49%]
-test_postcode_functions.py ............................................. [ 98%]
+test_postcode_cache.py FFFFFFFFF....                                     [ 14%]
+test_postcode_cli.py ...FFFFFFFFFFFF.................                    [ 49%]
+test_postcode_functions.py ......FFFFFFFFF.............................. [ 98%]
 .                                                                        [100%]
 
-======================== 13 failed, 78 passed in 7.69s =========================
+======================== 30 failed, 61 passed in 6.09s =========================
 ************* Module postcode_cli
 postcode_cli.py:4:0: C0301: Line too long (124/100) (line-too-long)
 postcode_cli.py:4:0: W0611: Unused get_postcodes_details imported from postcode_functions (unused-import)
 postcode_cli.py:4:0: W0611: Unused get_postcode_for_location imported from postcode_functions (unused-import)
 ************* Module postcode_functions
-postcode_functions.py:13:4: W2301: Unnecessary ellipsis constant (unnecessary-ellipsis)
-postcode_functions.py:19:4: W2301: Unnecessary ellipsis constant (unnecessary-ellipsis)
-postcode_functions.py:16:15: W0613: Unused argument 'cache' (unused-argument)
-postcode_functions.py:28:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:22:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-postcode_functions.py:45:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:49:11: C0121: Comparison 'res.json()['result'] == None' should be 'res.json()['result'] is None' (singleton-comparison)
-postcode_functions.py:39:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-postcode_functions.py:63:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:58:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-postcode_functions.py:86:10: W3101: Missing timeout argument for method 'req.post' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:86:19: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
-postcode_functions.py:74:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:39:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:28:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:58:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:62:11: C0121: Comparison 'res.json()['result'] == None' should be 'res.json()['result'] is None' (singleton-comparison)
+postcode_functions.py:52:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:76:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:71:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:99:10: W3101: Missing timeout argument for method 'req.post' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:99:19: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
+postcode_functions.py:87:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
 postcode_functions.py:4:0: C0411: standard import "os" should be placed before third party import "requests" (wrong-import-order)
 postcode_functions.py:5:0: C0411: standard import "json" should be placed before third party import "requests" (wrong-import-order)
 postcode_functions.py:4:0: W0611: Unused import os (unused-import)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.12/10 (previous run: 7.12/10, +0.00)
+Your code has been rated at 7.87/10 (previous run: 7.87/10, +0.00)
 
