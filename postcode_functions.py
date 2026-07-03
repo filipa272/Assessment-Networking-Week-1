@@ -10,8 +10,9 @@ CACHE_FILE = "./postcode_cache.json"
 def load_cache() -> dict:
     """Loads the cache from a file and converts it from JSON to a dictionary."""
     # This function is used in Task 3, you can ignore it for now.
-
-    with open(CACHE_FILE, "r", encoding="utf-8") as cache:
+    if not os.path.exists(CACHE_FILE):
+        return {}
+    with open("postcode_cache.json", "r", encoding="utf-8") as cache:
         postcode_data = json.load(cache)
 
     return postcode_data
@@ -21,7 +22,7 @@ def save_cache(cache: dict):
     """Saves the cache to a file as JSON"""
     # This function is used in Task 3, you can ignore it for now.
 
-    with open(CACHE_FILE, 'w', encoding='utf-8') as f:
+    with open('postcode_cache.json', 'w', encoding='utf-8') as f:
         json.dump(cache, f, ensure_ascii=False, indent=4)
 
 
@@ -40,7 +41,9 @@ def validate_postcode(postcode: str) -> bool:
         f"https://api.postcodes.io/postcodes/{postcode}/validate")
 
     if res.status_code == 200:
-        # print(type(res.json()['result']))
+
+        if postcode not in cache:
+            cache[postcode] = {}
         cache[postcode]['valid'] = res.json()['result']
         save_cache(cache)
         return res.json()['result']
@@ -73,10 +76,21 @@ def get_postcode_completions(postcode_start: str) -> list[str]:
     if not isinstance(postcode_start, str):
         raise TypeError("Function expects a string.")
 
+    cache = load_cache()
+
+    if postcode_start in cache:
+        if 'completions' in cache[postcode_start]:
+            return cache[postcode_start]['completions']
+
     res = req.get(
         f"https://api.postcodes.io/postcodes/{postcode_start}/autocomplete")
 
     if res.status_code == 200:
+
+        if postcode_start not in cache:
+            cache[postcode_start] = {}
+        cache[postcode_start]['completions'] = res.json()['result']
+        save_cache(cache)
 
         return res.json()['result']
 
