@@ -4,31 +4,30 @@ rootdir: /home/runner/work/Assessment-Networking-Week-1/Assessment-Networking-We
 plugins: requests-mock-1.12.1
 collected 91 items
 
-test_postcode_cache.py FFFFFFFFF....                                     [ 14%]
-test_postcode_cli.py ...FFFFFFFFFFFF.................                    [ 49%]
-test_postcode_functions.py ......FFFFFFFFF.............................. [ 98%]
+test_postcode_cache.py .............                                     [ 14%]
+test_postcode_cli.py ................................                    [ 49%]
+test_postcode_functions.py ............................................. [ 98%]
 .                                                                        [100%]
 
-======================== 30 failed, 61 passed in 6.09s =========================
+============================== 91 passed in 5.94s ==============================
 ************* Module postcode_cli
 postcode_cli.py:4:0: C0301: Line too long (124/100) (line-too-long)
 postcode_cli.py:4:0: W0611: Unused get_postcodes_details imported from postcode_functions (unused-import)
 postcode_cli.py:4:0: W0611: Unused get_postcode_for_location imported from postcode_functions (unused-import)
 ************* Module postcode_functions
-postcode_functions.py:39:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:28:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-postcode_functions.py:58:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:62:11: C0121: Comparison 'res.json()['result'] == None' should be 'res.json()['result'] is None' (singleton-comparison)
-postcode_functions.py:52:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-postcode_functions.py:76:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:71:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-postcode_functions.py:99:10: W3101: Missing timeout argument for method 'req.post' can cause your program to hang indefinitely (missing-timeout)
-postcode_functions.py:99:19: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
-postcode_functions.py:87:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:40:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:29:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:61:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:65:11: C0121: Comparison 'res.json()['result'] == None' should be 'res.json()['result'] is None' (singleton-comparison)
+postcode_functions.py:55:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:85:10: W3101: Missing timeout argument for method 'req.get' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:74:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+postcode_functions.py:113:10: W3101: Missing timeout argument for method 'req.post' can cause your program to hang indefinitely (missing-timeout)
+postcode_functions.py:113:19: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
+postcode_functions.py:101:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
 postcode_functions.py:4:0: C0411: standard import "os" should be placed before third party import "requests" (wrong-import-order)
 postcode_functions.py:5:0: C0411: standard import "json" should be placed before third party import "requests" (wrong-import-order)
-postcode_functions.py:4:0: W0611: Unused import os (unused-import)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.87/10 (previous run: 7.87/10, +0.00)
+Your code has been rated at 8.28/10 (previous run: 8.28/10, +0.00)
 
